@@ -1,0 +1,23 @@
+version: '2'
+services:
+  base:
+    build: .
+    restart: on-failure
+
+  one-day-rental:
+    extends: base
+    command: node one-day-rental/server.js
+    ports:
+      - 80:5000
+
+  offer-a-service:
+    extends: base
+    command: node services/offer-a-service.js
+
+  offer-b-service:
+    extends: base
+    command: node services/offer-b-service.js
+
+  logger-service:
+    extends: base
+    command: node services/logger-service.js

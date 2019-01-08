@@ -1,0 +1,29 @@
+{
+  "name": "rentals",
+  "version": "1.0.0",
+  "description": "Rentals Microservice demonstration",
+  "author": "Michael McKavanagh",
+  "license": "ISC",
+  "scripts": {
+    "test": "ava ./test/unit --verbose --timeout=5000",
+    "test:integration": "ava ./test/integration --verbose --timeout=5000"
+	},
+  "repository": {
+		"type": "git",
+		"url": "git+https://github.com/MichaelMcKavanagh/rentals.git"
+	},
+	"keywords": [
+		"microservice",
+		"docker-compose"
+	],
+  "dependencies": {
+    "axios-cache-adapter": "^2.1.1",
+    "cote": "^0.18.4",
+    "express": "^4.16.4",
+    "node-fetch": "^2.3.0",
+    "winston": "^3.1.0"
+  },
+  "devDependencies": {
+    "ava": "^1.0.1"
+  }
+}
